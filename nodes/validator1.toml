@@ -1,0 +1,43 @@
+[Eth]
+NetworkId = 38051
+SyncMode = "fast"
+LightPeers = 20
+DatabaseCache = 128
+Etherbase = "0xb06fef0a4ecaa3e7c57cfbc4215d178a6a908ef8"
+GasPrice = 18000000000
+EnablePreimageRecording = false
+
+[Eth.TxPool]
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Eth.GPO]
+Blocks = 10
+Percentile = 50
+
+[Shh]
+MaxMessageSize = 1048576
+MinimumAcceptedPOW = 2e-01
+
+[Node]
+HTTPModules = ["net", "web3", "eth", "shh"]
+WSModules = ["net", "web3", "eth", "shh"]
+
+[Node.P2P]
+MaxPeers = 25
+NoDiscovery = false
+DiscoveryV5Addr = ":30300"
+BootstrapNodes = []
+BootstrapNodesV5 = []
+StaticNodes = []
+TrustedNodes = []
+ListenAddr = ":30301"
+EnableMsgEvents = false

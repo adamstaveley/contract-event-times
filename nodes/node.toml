@@ -1,0 +1,49 @@
+[Eth]
+NetworkId = 38051
+SyncMode = "fast"
+LightPeers = 20
+DatabaseCache = 128
+GasPrice = 18000000000
+Etherbase = "0xfca2587aae9f8fe4d37619010fff01a7564431fc"
+EnablePreimageRecording = false
+
+[Eth.TxPool]
+NoLocals = false
+Journal = "transactions.rlp"
+Rejournal = 3600000000000
+PriceLimit = 1
+PriceBump = 10
+AccountSlots = 16
+GlobalSlots = 4096
+AccountQueue = 64
+GlobalQueue = 1024
+Lifetime = 10800000000000
+
+[Eth.GPO]
+Blocks = 10
+Percentile = 50
+
+[Shh]
+MaxMessageSize = 1048576
+MinimumAcceptedPOW = 2e-01
+
+[Node]
+HTTPHost = "0.0.0.0"
+HTTPPort = 8545
+HTTPCors = ["*"]
+HTTPModules = ["db", "eth", "net", "web3", "personal"]
+WSHost = "0.0.0.0"
+WSPort = 8546
+WSOrigins = ["*"]
+WSModules = ["db", "eth", "net", "web3", "personal"]
+
+[Node.P2P]
+MaxPeers = 25
+NoDiscovery = false
+DiscoveryV5Addr = ":30300"
+BootstrapNodes = []
+BootstrapNodesV5 = []
+StaticNodes = ["enode://cff4603ac430801d335290eef3d44fd8ec5012cf1d65d0288fc16c8d188831ef45d1cf3493359963c35547846aca25d4815f4fdd4aa9ed3f17454d6cc49423e6@127.0.0.1:30301", "enode://872ef70d63d7407e122bc48e5fdf9bd6ee9b8618b8f3f01a33c4112ae1ae0ce2fb164e98b2edfdc8afb524b66292d3f8469c14d8b0ac8b4b0d899371e27a28ce@127.0.0.1:30302"]
+TrustedNodes = []
+ListenAddr = ":30303"
+EnableMsgEvents = false
